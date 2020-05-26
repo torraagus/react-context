@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+// import logo from './logo.svg';
+import "./App.css";
+import ComponentC from "./components/ComponentC";
+import { UserProvider } from "./components/userContext";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const data = 1; // int
+	//const data = false; // boolean
+	//const data = "John"; // string
+	//const data = [1,3,"name",false]; // array
+	//const data = { id: 1323546, name: "Agustin", age: 28 }; // object
+	return (
+		<div className="App">
+			<UserProvider value={data}>
+				<ComponentC />
+			</UserProvider>
+		</div>
+	);
 }
 
 export default App;
