@@ -9,7 +9,7 @@ export default class ComponentF extends Component {
 					return (
 						<div>
 							<h1>Component F</h1>
-							<p>Context value {JSON.stringify(val)}</p>
+							<p>Context value without hook: {JSON.stringify(val)}</p>
 						</div>
 					);
 				}}
